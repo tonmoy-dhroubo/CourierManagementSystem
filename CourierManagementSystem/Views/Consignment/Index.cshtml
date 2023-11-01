@@ -1,0 +1,148 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using CourierManagementSystem.Data
+@using System.Security.Claims
+@inject SignInManager<CustomUser> SignInManager
+@inject UserManager<CustomUser> UserManager
+
+@* for pagination *@
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+
+
+@model X.PagedList.IPagedList<CourierManagementSystem.Models.Entities.Consignment>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Your Ordered Couriers</h1>
+
+
+@if(!Model.Any())
+{
+    <h3>You have not placed any order yet.</h3>
+    <p>
+        <a class="btn btn-primary " asp-action="Create">Place A New Order</a>
+    </p>
+}
+else
+{
+    <div class="">
+        <p>
+            <a class="btn btn-primary " asp-action="Create">Place A New Order</a>
+        </p>
+        <table class="table table-striped ">
+            <thead>
+            <tr>
+                <th>
+                     Tracking Number 
+                </th>
+                <th>
+                     Sender Name 
+                </th>
+                <th>
+                     Recipient Name 
+                </th>
+                <th>
+                     Recipient Email  
+                </th>
+                <th>
+                     Recipient Phone Number  
+                </th>
+                <th>
+                     Delivery Address 
+                </th>
+                <th>
+                     Parcel Weight 
+                </th>
+                <th>
+                     Parcel Content 
+                </th>
+                <th>
+                     Order Date 
+                </th>
+                <th>
+                     Estimated Delivery Date 
+                </th>
+                <th>
+                     Shipping Cost 
+                </th>
+                <th>
+                     Status 
+                </th>
+                <th></th> 
+                 <th></th> 
+            </tr>
+            </thead>
+            <tbody>
+                
+            @foreach (var item in Model)
+            {
+                    
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TrackingNumber)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SenderName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.RecipientName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.RecipientEmail)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.RecipientPhoneNumber)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DeliveryAddress)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ParcelWeight)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ParcelContent)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.OrderDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.EstimatedDeliveryDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ShippingCost)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Status)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary">Edit</a>
+                    </td>
+                    <td>
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this item?');">Delete</a>
+                    </td>
+                </tr>
+                    
+                    
+            }
+            </tbody>
+        </table>
+
+        <div class=" pagination">
+            @if (Model.HasPreviousPage)
+            {
+                <a asp-action="Index" class="page-link" asp-route-page="1" asp-route-pageSize="@Model.PageSize">First</a>
+                <a asp-action="Index" class="page-link"  asp-route-page="@(Model.PageNumber - 1)" asp-route-pageSize="@Model.PageSize">Previous</a>
+            }
+            @if (Model.HasNextPage)
+            {
+
+                <a asp-action="Index" class="page-link" asp-route-page="@(Model.PageNumber + 1)" asp-route-pageSize="@Model.PageSize">Next</a>
+                <a asp-action="Index" class="page-link" asp-route-page="@(Model.PageCount)" asp-route-pageSize="@Model.PageSize">Last</a>
+            }
+        </div>
+
+    </div>
+
+}

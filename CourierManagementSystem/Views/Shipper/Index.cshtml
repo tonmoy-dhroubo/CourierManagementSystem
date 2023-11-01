@@ -1,0 +1,90 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using CourierManagementSystem.Data
+@using System.Security.Claims
+@* @inject SignInManager<CustomUser> SignInManager
+@inject UserManager<CustomUser> UserManager
+ *@
+ 
+@* for pagination *@
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+
+@model X.PagedList.IPagedList<CourierManagementSystem.Models.Entities.Shipper>
+
+@{
+    ViewData["Title"] = "Shippers";
+}
+
+<h1>Shippers in contract with company</h1>
+
+
+@if (!Model.Any())
+{
+    <h3>No shippers available at this moment</h3>
+    <p>
+        <a class="btn btn-primary " asp-action="Create">Recruit New Shipper</a>
+    </p>
+}
+else
+{
+    <div class="">
+        <p>
+            <a class="btn btn-primary " asp-action="Create">Recruit New Shipper</a>
+        </p>
+        <table class="table table-striped ">
+            <thead>
+            <tr>
+                <th>
+                    Company Name
+                </th>
+                <th>
+                    Contact Person Name
+                </th>
+                <th>
+                    Contact Person Phone
+                </th>
+                    
+                @* <th></th> *@
+            </tr>
+            </thead>
+            <tbody>
+
+            @foreach (var item in Model)
+            {
+                    
+                <tr>
+                    <th>
+                        @Html.DisplayFor(modelItem => item.CompanyName)
+                    </th>
+                    <th>
+                        @Html.DisplayFor(modelItem => item.ContactPersonName)
+                    </th>
+                    <th>
+                        @Html.DisplayFor(modelItem => item.ContactPersonPhone)
+                    </th>
+                        
+                </tr>
+                    
+
+            }
+            </tbody>
+        </table>
+
+
+        <div class=" pagination">
+            @if (Model.HasPreviousPage)
+            {
+                <a asp-action="Index" class="page-link" asp-route-page="1" asp-route-pageSize="@Model.PageSize">First</a>
+                <a asp-action="Index" class="page-link" asp-route-page="@(Model.PageNumber - 1)" asp-route-pageSize="@Model.PageSize">Previous</a>
+            }
+            @if (Model.HasNextPage)
+            {
+
+                <a asp-action="Index" class="page-link" asp-route-page="@(Model.PageNumber + 1)" asp-route-pageSize="@Model.PageSize">Next</a>
+                <a asp-action="Index" class="page-link" asp-route-page="@(Model.PageCount)" asp-route-pageSize="@Model.PageSize">Last</a>
+            }
+        </div>
+
+    </div>
+
+}

@@ -1,0 +1,38 @@
+﻿
+
+@model CourierManagementSystem.Models.Entities.Shipper
+
+<h1>Recruit New Shipper</h1>
+
+<h4>Submit shipper information</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CompanyName" class="control-label"></label>
+                <input asp-for="CompanyName" class="form-control" />
+                <span asp-validation-for="CompanyName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ContactPersonName" class="control-label"></label>
+                <input asp-for="ContactPersonName" class="form-control" />
+                <span asp-validation-for="ContactPersonName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ContactPersonPhone" class="control-label"></label>
+                <input asp-for="ContactPersonPhone" class="form-control" />
+                <span asp-validation-for="ContactPersonPhone" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a class="btn btn-success" asp-action="Index">Back to Shipper List</a>
+</div>

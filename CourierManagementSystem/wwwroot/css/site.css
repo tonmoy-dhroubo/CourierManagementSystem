@@ -1,0 +1,83 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background-color: #edf5fa;
+}
+
+/* For Tracking Page */
+
+.tracking-log {
+    background-color: lightcyan; /* Background color for tracking log boxes */
+    color: #333; /* Text color */
+    border: 1px solid #d6d8db; /* Border color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for a raised effect */
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.arrow-down {
+    text-align: center;
+}
+
+.arrow-down i {
+    font-size: 24px;
+    color: #007bff; /* Arrow color */
+}
+/* For Tracking Page */
+
+/* site.css or custom stylesheet */
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    /*background-color: #333;*/ /* Set the background color you desire */
+    /*color: #fff;*/ /* Set the text color you desire */
+    padding: 20px; /* Add padding to style the footer */
+}
+
+
+/* Add some basic styling for the sidebar */
+.sidebar {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* background-color: #333; */
+    /*padding-top: 200px;*/
+    background-color: #D5D4C9;
+}
+
+/* Style the links inside the sidebar */
+.sidebar a {
+    padding: 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+    display: block;
+}
+
+/* Change the color of the links on hover */
+.sidebar a:hover {
+    background-color: #555;
+    color: white;
+}
+
+.margin-for-sidebar {
+    margin-left : 200px;
+}

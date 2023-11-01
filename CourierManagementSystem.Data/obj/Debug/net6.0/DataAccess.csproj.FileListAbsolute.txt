@@ -1,0 +1,17 @@
+C:\Users\dhrubo\CODE\NET\CourierManagementSystem\CourierManagementSystem.Data\bin\Debug\net6.0\DataAccess.deps.json
+C:\Users\dhrubo\CODE\NET\CourierManagementSystem\CourierManagementSystem.Data\bin\Debug\net6.0\DataAccess.runtimeconfig.json
+C:\Users\dhrubo\CODE\NET\CourierManagementSystem\CourierManagementSystem.Data\bin\Debug\net6.0\DataAccess.dll
+C:\Users\dhrubo\CODE\NET\CourierManagementSystem\CourierManagementSystem.Data\bin\Debug\net6.0\DataAccess.pdb
+C:\Users\dhrubo\CODE\NET\CourierManagementSystem\CourierManagementSystem.Data\bin\Debug\net6.0\CourierManagementSystem.Models.dll
+C:\Users\dhrubo\CODE\NET\CourierManagementSystem\CourierManagementSystem.Data\bin\Debug\net6.0\CourierManagementSystem.Models.pdb
+C:\Users\dhrubo\CODE\NET\CourierManagementSystem\CourierManagementSystem.Data\obj\Debug\net6.0\DataAccess.csproj.AssemblyReference.cache
+C:\Users\dhrubo\CODE\NET\CourierManagementSystem\CourierManagementSystem.Data\obj\Debug\net6.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dhrubo\CODE\NET\CourierManagementSystem\CourierManagementSystem.Data\obj\Debug\net6.0\DataAccess.AssemblyInfoInputs.cache
+C:\Users\dhrubo\CODE\NET\CourierManagementSystem\CourierManagementSystem.Data\obj\Debug\net6.0\DataAccess.AssemblyInfo.cs
+C:\Users\dhrubo\CODE\NET\CourierManagementSystem\CourierManagementSystem.Data\obj\Debug\net6.0\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\dhrubo\CODE\NET\CourierManagementSystem\CourierManagementSystem.Data\obj\Debug\net6.0\DataAccess.csproj.CopyComplete
+C:\Users\dhrubo\CODE\NET\CourierManagementSystem\CourierManagementSystem.Data\obj\Debug\net6.0\DataAccess.dll
+C:\Users\dhrubo\CODE\NET\CourierManagementSystem\CourierManagementSystem.Data\obj\Debug\net6.0\refint\DataAccess.dll
+C:\Users\dhrubo\CODE\NET\CourierManagementSystem\CourierManagementSystem.Data\obj\Debug\net6.0\DataAccess.pdb
+C:\Users\dhrubo\CODE\NET\CourierManagementSystem\CourierManagementSystem.Data\obj\Debug\net6.0\DataAccess.genruntimeconfig.cache
+C:\Users\dhrubo\CODE\NET\CourierManagementSystem\CourierManagementSystem.Data\obj\Debug\net6.0\ref\DataAccess.dll

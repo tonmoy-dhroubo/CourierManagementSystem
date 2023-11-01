@@ -1,0 +1,26 @@
+﻿@using CourierManagementSystem.Data;
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<CustomUser> SignInManager
+@inject UserManager<CustomUser> UserManager
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@if(SignInManager.IsSignedIn(User))
+{
+    <h1>Welcome @UserManager.GetUserAsync(User).Result.Name</h1>
+
+   @if(User.IsInRole("Customer"))
+   {
+       <a class="btn btn-info mt-lg-5" asp-controller="Order" asp-action="Create" > Order a new courier delivery</a>
+   }
+   
+}
+else
+{
+    <h1>Welcome</h1>
+    <h3>Sign In to track your parcel</h3>
+}
+
+

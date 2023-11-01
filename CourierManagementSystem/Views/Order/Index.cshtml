@@ -1,0 +1,163 @@
+﻿
+
+
+@using Microsoft.AspNetCore.Identity
+@using CourierManagementSystem.Data
+@using System.Security.Claims
+@inject SignInManager<CustomUser> SignInManager
+@inject UserManager<CustomUser> UserManager
+
+@* for pagination *@
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@model X.PagedList.IPagedList<CourierManagementSystem.Models.Entities.Consignment>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Your Ordered Couriers</h1>
+
+
+
+@* @foreach(var item in Model)
+{
+    @if (item.TrackingLogs != null)
+    {
+
+        @foreach (var cons in item.TrackingLogs)
+        {
+            <h3>@cons.Location</h3>
+        }
+    }
+
+} *@
+
+@if(!Model.Any())
+{
+    <h3>You have not placed any order yet.</h3>
+    <p>
+        <a class="btn btn-primary " asp-action="Create">Place A New Order</a>
+    </p> 
+}
+else
+{
+    <div class="">
+        <p>
+            <a class="btn btn-primary " asp-action="Create">Place A New Order</a>
+        </p>
+        <table class="table table-striped ">
+            <thead>
+            <tr>
+                <tr>
+                    <th>
+                        Tracking Number 
+                    </th>
+                    <th>
+                        Sender Name 
+                    </th>
+                    <th>
+                        Recipient Name 
+                    </th>
+                    <th>
+                        Recipient Email  
+                    </th>
+                    <th>
+                        Recipient Phone Number  
+                    </th>
+                    <th>
+                        Delivery Address 
+                    </th>
+                    <th>
+                        Parcel Weight 
+                    </th>
+                    <th>
+                        Parcel Content 
+                    </th>
+                    <th>
+                        Order Date 
+                    </th>
+                    <th>
+                        Estimated Delivery Date 
+                    </th>
+                    <th>
+                        Shipping Cost 
+                    </th>
+                    <th>
+                        Status 
+                    </th>
+                    @* <th></th> *@
+                </tr>
+                    
+            </tr>
+            </thead>
+            <tbody>
+                
+            @foreach (var item in Model)
+            {
+                    
+                <tr>
+                    <th>
+                        @Html.DisplayFor(modelItem => item.TrackingNumber)
+                    </th>
+                    <th>
+                        @Html.DisplayFor(modelItem => item.SenderName)
+                    </th>
+                    <th>
+                        @Html.DisplayFor(modelItem => item.SenderAddress)
+                    </th>
+                    <th>
+                        @Html.DisplayFor(modelItem => item.RecipientName)
+                    </th>
+                    <th>
+                        @Html.DisplayFor(modelItem => item.RecipientEmail)
+                    </th>
+                    <th>
+                        @Html.DisplayFor(modelItem => item.RecipientPhoneNumber)
+                    </th>
+                    <th>
+                        @Html.DisplayFor(modelItem => item.DeliveryAddress)
+                    </th>
+                    <th>
+                        @Html.DisplayFor(modelItem => item.ParcelWeight)
+                    </th>
+                    <th>
+                        @Html.DisplayFor(modelItem => item.ParcelContent)
+                    </th>
+                    <th>
+                        @Html.DisplayFor(modelItem => item.OrderDate)
+                    </th>
+                    <th>
+                        @item.EstimatedDeliveryDate
+                    </th>
+                    <th>
+                        @Html.DisplayFor(modelItem => item.ShippingCost)
+                    </th>
+                    <th>
+                        @Html.DisplayFor(modelItem => item.Status)
+                    </th>
+                </tr>
+                    
+                    
+            }
+            </tbody>
+        </table>
+
+
+        <div class=" pagination">
+            @if (Model.HasPreviousPage)
+            {
+                <a asp-action="Index" class="page-link" asp-route-page="1" asp-route-pageSize="@Model.PageSize">First</a>
+                <a asp-action="Index" class="page-link" asp-route-page="@(Model.PageNumber - 1)" asp-route-pageSize="@Model.PageSize">Previous</a>
+            }
+            @if (Model.HasNextPage)
+            {
+
+                <a asp-action="Index" class="page-link" asp-route-page="@(Model.PageNumber + 1)" asp-route-pageSize="@Model.PageSize">Next</a>
+                <a asp-action="Index" class="page-link" asp-route-page="@(Model.PageCount)" asp-route-pageSize="@Model.PageSize">Last</a>
+            }
+        </div>
+
+    </div>
+
+}

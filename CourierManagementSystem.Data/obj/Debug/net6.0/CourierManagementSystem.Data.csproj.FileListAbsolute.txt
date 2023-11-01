@@ -1,0 +1,17 @@
+C:\Users\dhrubo\CODE\NET\CourierManagementSystem\CourierManagementSystem.Data\bin\Debug\net6.0\CourierManagementSystem.Data.deps.json
+C:\Users\dhrubo\CODE\NET\CourierManagementSystem\CourierManagementSystem.Data\bin\Debug\net6.0\CourierManagementSystem.Data.runtimeconfig.json
+C:\Users\dhrubo\CODE\NET\CourierManagementSystem\CourierManagementSystem.Data\bin\Debug\net6.0\CourierManagementSystem.Data.dll
+C:\Users\dhrubo\CODE\NET\CourierManagementSystem\CourierManagementSystem.Data\bin\Debug\net6.0\CourierManagementSystem.Data.pdb
+C:\Users\dhrubo\CODE\NET\CourierManagementSystem\CourierManagementSystem.Data\bin\Debug\net6.0\CourierManagementSystem.Models.dll
+C:\Users\dhrubo\CODE\NET\CourierManagementSystem\CourierManagementSystem.Data\bin\Debug\net6.0\CourierManagementSystem.Models.pdb
+C:\Users\dhrubo\CODE\NET\CourierManagementSystem\CourierManagementSystem.Data\obj\Debug\net6.0\CourierManagementSystem.Data.csproj.AssemblyReference.cache
+C:\Users\dhrubo\CODE\NET\CourierManagementSystem\CourierManagementSystem.Data\obj\Debug\net6.0\CourierManagementSystem.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dhrubo\CODE\NET\CourierManagementSystem\CourierManagementSystem.Data\obj\Debug\net6.0\CourierManagementSystem.Data.AssemblyInfoInputs.cache
+C:\Users\dhrubo\CODE\NET\CourierManagementSystem\CourierManagementSystem.Data\obj\Debug\net6.0\CourierManagementSystem.Data.AssemblyInfo.cs
+C:\Users\dhrubo\CODE\NET\CourierManagementSystem\CourierManagementSystem.Data\obj\Debug\net6.0\CourierManagementSystem.Data.csproj.CoreCompileInputs.cache
+C:\Users\dhrubo\CODE\NET\CourierManagementSystem\CourierManagementSystem.Data\obj\Debug\net6.0\CourierManagementSystem.Data.csproj.CopyComplete
+C:\Users\dhrubo\CODE\NET\CourierManagementSystem\CourierManagementSystem.Data\obj\Debug\net6.0\CourierManagementSystem.Data.dll
+C:\Users\dhrubo\CODE\NET\CourierManagementSystem\CourierManagementSystem.Data\obj\Debug\net6.0\refint\CourierManagementSystem.Data.dll
+C:\Users\dhrubo\CODE\NET\CourierManagementSystem\CourierManagementSystem.Data\obj\Debug\net6.0\CourierManagementSystem.Data.pdb
+C:\Users\dhrubo\CODE\NET\CourierManagementSystem\CourierManagementSystem.Data\obj\Debug\net6.0\CourierManagementSystem.Data.genruntimeconfig.cache
+C:\Users\dhrubo\CODE\NET\CourierManagementSystem\CourierManagementSystem.Data\obj\Debug\net6.0\ref\CourierManagementSystem.Data.dll

@@ -1,0 +1,39 @@
+﻿@using CourierManagementSystem.Data;
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<CustomUser> SignInManager
+@inject UserManager<CustomUser> UserManager
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@if (SignInManager.IsSignedIn(User))
+{
+    <h1>Welcome @UserManager.GetUserAsync(User).Result.Name</h1>
+
+    <div class="container">
+        <h1 class="mt-5">Track Your Courier</h1>
+        <p>Enter your tracking number below to check the status of your courier:</p>
+
+        <form asp-action="Show">
+            <div class="form-group">
+                <label for="trackingNumber">Tracking Number:</label>
+                <input type="text" class="form-control" id="trackingNumber" name="trackingNumber" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Track</button>
+        </form>
+
+
+    </div>
+
+
+    
+
+
+}
+else
+{
+    <h1>Welcome</h1>
+}
+
+

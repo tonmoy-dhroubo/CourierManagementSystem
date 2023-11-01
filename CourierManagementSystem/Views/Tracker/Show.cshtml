@@ -1,0 +1,45 @@
+﻿@using CourierManagementSystem.Data
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<CustomUser> SignInManager
+@inject UserManager<CustomUser> UserManager
+
+@model IEnumerable<CourierManagementSystem.Models.Entities.TrackingLog>
+
+@{
+    ViewData["Title"] = "Tracking Information";
+}
+
+
+<div class="container">
+    <h2>Tracking Information</h2>
+
+    <div class="col mt-4">
+        @foreach (var log in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="tracking-log">
+                    <h5 class="card-title">Location: @log.Location</h5>
+                    <p class="card-text">Status: @log.Status</p>
+                    <p class="card-text">Date: @log.Date.ToString("dd MMMM HH:mm")</p>
+                </div>
+                @if (log != Model.Last())
+                {
+                    <div class="arrow-down">
+                        <i class="fas fa-arrow-down"></i>
+                    </div>
+                }
+            </div>
+        }
+    </div>
+    
+    
+    @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+    {
+        <div class="row">
+            <p>
+                <a class="btn btn-primary " asp-action="Create" asp-route-trackingNumber="@Model.First().TrackingNumber">Log new tracker update</a>
+            </p>
+        </div>
+    }
+    
+</div>

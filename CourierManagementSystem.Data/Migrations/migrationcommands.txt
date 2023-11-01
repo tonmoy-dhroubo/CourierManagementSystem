@@ -1,0 +1,2 @@
+Add-Migration Relation1 -Project CourierManagementSystem.Data -StartupProject CourierManagementSystem.Web
+Update-Database -Project CourierManagementSystem.Data -StartupProject CourierManagementSystem.Web
